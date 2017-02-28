@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
 		super();
 		this.setTitle("Task & Timer!");
 		this.setResizable(false);
-		this.setSize(240,340);
+		this.setSize(200,340);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setAlwaysOnTop(true); // 常に前面に出す

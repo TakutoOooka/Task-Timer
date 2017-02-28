@@ -12,8 +12,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import com.src.helper.ImageButton;
-
 public class SettingView extends JPanel {
 	JLabel hoursLabel;
 	JLabel minutesLabel;
@@ -48,12 +46,12 @@ public class SettingView extends JPanel {
 		hoursLabel = new JLabel("Hours");
 		minutesLabel = new JLabel("Minutes");
 		secLabel = new JLabel("Seconds");
-		hours = new JTextField(5);
-		hours.setText("0");
-		minutes = new JTextField(5);
-		minutes.setText("0");
-		sec = new JTextField(5);
-		sec.setText("0");
+		hours = new JTextField(3);
+		hours.setText("");
+		minutes = new JTextField(3);
+		minutes.setText("");
+		sec = new JTextField(3);
+		sec.setText("");
 
 		layout = new GridBagLayout();
 
@@ -108,7 +106,15 @@ public class SettingView extends JPanel {
 		this.repaint();
 	}
 
+	public void clearSetting() {
+		this.hours.setText("");
+		this.minutes.setText("");
+		this.sec.setText("");
+	}
+
 	public JTextField getHours() {return hours;}
 	public JTextField getMinutes() {return minutes;}
 	public JTextField getSec() {return sec;}
+	public JButton getStartBtn() {return startBtn;}
+	public JButton getResetBtn() {return resetBtn;}
 }

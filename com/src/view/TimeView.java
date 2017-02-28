@@ -24,12 +24,12 @@ public class TimeView extends JPanel {
 
 	public JLabel getTimeLabel() {return timeLabel;}
 	public void setTime(int hour, int min, int sec) {
-		if(hour < 10) hourSt = "0"+hourSt.toString();
-		else hourSt = hourSt.toString();
-		if(min < 10) minSt = "0"+minSt.toString();
-		else minSt = minSt.toString();
-		if(sec < 10) secSt = "0"+secSt.toString();
-		else secSt = secSt.toString();
+		if(hour < 10) hourSt = "0"+String.valueOf(hour);
+		else hourSt = String.valueOf(hour);
+		if(min < 10) minSt = "0"+String.valueOf(min);
+		else minSt = String.valueOf(min);
+		if(sec < 10) secSt = "0"+String.valueOf(sec);
+		else secSt = String.valueOf(sec);
 
 		timeLabel.setText(hourSt+":"+minSt+":"+secSt);
 	}

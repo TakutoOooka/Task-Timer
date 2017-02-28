@@ -44,7 +44,7 @@ public class MainView extends JPanel {
 		this.add(settingView);
 		this.add(timeView);
 		this.add(taskView);
-		
+
 		this.repaint();
 	}
 	public SettingView getSettingView() {return settingView;}

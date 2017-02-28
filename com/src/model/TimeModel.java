@@ -19,11 +19,13 @@ public class TimeModel {
 		} else { sec--; }
 	}
 
-	public void setTime(int sec, int min, int hour) {
+	public void setTime(int hour, int min, int sec) {
 		this.sec = sec;
 		this.min = min;
 		this.hour = hour;
 	}
-
+	public int getHour() {return hour;}
+	public int getMin() {return min;}
+	public int getSec() {return sec;}
 	public Boolean getTimeOver() {return timeOver;}
 }
