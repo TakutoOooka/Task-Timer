@@ -16,12 +16,17 @@ public class TimeController implements ActionListener {
 	}
 
 	public Boolean getMove() {return isMove;}
-	public void startTimer() {timer.start();}
-	public void stopTimer() {timer.stop();}
+	public void startTimer() {timer.start(); isMove = true;}
+	public void stopTimer() {timer.stop(); isMove = false;}
 	public void resetTimer() {
 		timer.restart();
 		timer.stop();
 	}
 	// Override
-	public void actionPerformed(ActionEvent e) {mainCont.takeTimerAction();}
+	public void actionPerformed(ActionEvent e) {
+		mainCont.takeTimerAction();
+		if(mainCont.getTimeModel().getTimeOver()) {
+			mainCont.stopTimer();
+		}
+	}
 }

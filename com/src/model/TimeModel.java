@@ -10,6 +10,7 @@ public class TimeModel {
 	}
 
 	public void minusTime() {
+		timeOver = false;
 		if(sec < 1) {
 			if(min < 1) {
 				if(hour < 1) {
@@ -23,6 +24,8 @@ public class TimeModel {
 		this.sec = sec;
 		this.min = min;
 		this.hour = hour;
+		if(hour>0 && min>0 && sec>0) timeOver = false;
+		else timeOver = true;
 	}
 	public int getHour() {return hour;}
 	public int getMin() {return min;}

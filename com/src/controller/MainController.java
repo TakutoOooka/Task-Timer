@@ -37,6 +37,11 @@ public class MainController {
 		updateView();
 	}
 	public void updateView() {
+		mainView.getSettingView().setTime(
+			timeModel.getHour(),
+			timeModel.getMin(),
+			timeModel.getSec()
+		);
 		timeView.setTime(
 			timeModel.getHour(),
 			timeModel.getMin(),
@@ -49,4 +54,5 @@ public class MainController {
 	public Boolean getMoveTimer() {return timeCont.getMove();}
 	public MainView getView() {return mainView;}
 	public MainModel getModel() {return mainModel;}
+	public 	TimeModel getTimeModel() {return timeModel;}
 }

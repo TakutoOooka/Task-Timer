@@ -19,8 +19,6 @@ public class SettingView extends JPanel {
 	JTextField hours;
 	JTextField minutes;
 	JTextField sec;
-	// ImageButton startBtn;
-	// ImageButton resetBtn;
 	JPanel startBtnPanel;
 	JButton startBtn;
 	JPanel resetBtnPanel;
@@ -110,6 +108,11 @@ public class SettingView extends JPanel {
 		this.hours.setText("");
 		this.minutes.setText("");
 		this.sec.setText("");
+	}
+	public void setTime(int hour, int min, int sec) {
+		this.hours.setText(String.valueOf(hour));
+		this.minutes.setText(String.valueOf(min));
+		this.sec.setText(String.valueOf(sec));
 	}
 
 	public JTextField getHours() {return hours;}
