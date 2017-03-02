@@ -26,7 +26,7 @@ public class TimeController implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		mainCont.takeTimerAction();
 		if(mainCont.getTimeModel().getTimeOver()) {
-			mainCont.stopTimer();
+			stopTimer();
 		}
 	}
 }

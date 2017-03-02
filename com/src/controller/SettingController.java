@@ -82,7 +82,6 @@ public class SettingController {
 
 		view_value = readField();
 
-		// limitTextField();
 		if ((mod & InputEvent.SHIFT_DOWN_MASK) != 0){
 			switch(keycode) {
 				case KeyEvent.VK_UP:addValue(mode, 1); break;
